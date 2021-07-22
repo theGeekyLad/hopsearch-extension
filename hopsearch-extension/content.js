@@ -69,7 +69,8 @@ function keyDownHandler(e) {
 
 function clickHandlerForLocatingSearchBox(e) {
     const mId = e.target.getAttribute('id');
-    const mClass = e.target.getAttribute('class');
+    let mClass = e.target.getAttribute('class');
+    mClass = mClass && mClass.indexOf(' ') != -1 ? mClass.substring(0, mClass.indexOf(' ')) : mClass;
     console.log(`Click detected on element id="${mId}" and class="${mClass}"`)
     let newConfig = {};
     newConfig[getDomain(window.location.href)] = mId ? `#${mId}` : `.${mClass}`;
