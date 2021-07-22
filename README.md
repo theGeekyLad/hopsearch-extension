@@ -1,6 +1,6 @@
 # HopSearch
 
-_Jump to the search box in a jiffy!_
+_`Alt+/` to jump to the search box in a jiffy!_
 
 Twitter, Google Search and a few others have it, but, possibly, your favorite website doesn't allow you to use a key-combo to jump to the search field.
 
@@ -52,7 +52,7 @@ I'll merge it upstream every week.
 
 ---
 
-Made with :heart: by `theGeekyLad`
+Made with :heart: by `theGeekyLad`Add 
 
 <!--
 ## To-Do
