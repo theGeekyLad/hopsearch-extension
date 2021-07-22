@@ -4,11 +4,11 @@ _`Alt+/` to jump to the search box in a jiffy!_
 
 Twitter, Google Search and a few others have it, but, possibly, your favorite website doesn't allow you to use a key-combo to jump to the search field.
 
-## What is it?
+## What is it? :confused:
 
 HopSearch is a Chrome **browser extension** that allows you to use the key-combo `Alt+/` to jump to the search input box on any page. Ofcourse, the extension doesn't know-it-all and hence requires your help in discovering new pages, which, again, is just a _click_ away.
 
-## How to use it?
+## How to use it? :wrench:
 
 If you're here, you're probably not going to install it via the Chrome Extensions store but, hey, that's the easiest way to go.
 
@@ -22,9 +22,9 @@ Nonetheless, here's how you install it from this repository:
 
 Now hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
 
-## Features _(as FAQs)_
+## Features _(as FAQs)_ :gem:
 
-### How to make it work for _this_ website?
+### How to make it work for _this_ website? 
 
 - Open your [favorite website](https://www.reddit.com/r/selfhosted/)
 - `AltH` or click on the extension button in the Chrome toolbar
@@ -38,7 +38,7 @@ Try `Alt+/` and you should find the cursor at the search box.
 
 It could be meddlesome while typing with heavy shortcuts, I understand. Just `Alt+H` or click on the extension button in the Chrome toolbar and then click on _Pause_.
 
-## Discovering websites?
+## Discovering websites? :thought_baloon:
 
 As I said in the first section, this extension ain't a know-it-all and I require _your_ help in extending it to websites I've not visited before. It helps other users who would visit the same website in the future.
 
