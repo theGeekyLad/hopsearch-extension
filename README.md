@@ -38,7 +38,7 @@ Try `Alt+/` and you should find the cursor at the search box.
 
 It could be meddlesome while typing with heavy shortcuts, I understand. Just `Alt+H` or click on the extension button in the Chrome toolbar and then click on _Pause_.
 
-## Discovering websites? :thought_baloon:
+## Discovering websites? :pencil:
 
 As I said in the first section, this extension ain't a know-it-all and I require _your_ help in extending it to websites I've not visited before. It helps other users who would visit the same website in the future.
 
