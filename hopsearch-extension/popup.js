@@ -67,6 +67,14 @@ document.getElementById('button-locate').addEventListener('click', () => {
     });
 });
 
+document.getElementById('button-copy').addEventListener('click', () => {
+    chrome.storage.local.get(null, items => {
+        navigator.clipboard.writeText(JSON.stringify(items)).then(() => {
+            alert('Copied config!');
+        })
+    });
+});
+
 // document.onreadystatechange = function() {
 //     if (document.readyState === 'complete') {
 //         document.getElementById('field-url').innerHTML = 'hi';
