@@ -54,6 +54,19 @@ document.getElementById('button-sync').addEventListener('click', () => {
     })
 });
 
+document.getElementById('button-pause').addEventListener('click', () => {
+    chrome.tabs.sendMessage(tab.id, 'toggle-pause', function (response) {
+        console.log(response);
+    });
+    alert('Toggled pause once.');
+});
+
+document.getElementById('button-locate').addEventListener('click', () => {
+    chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
+        // console.log(response);
+    });
+});
+
 // document.onreadystatechange = function() {
 //     if (document.readyState === 'complete') {
 //         document.getElementById('field-url').innerHTML = 'hi';

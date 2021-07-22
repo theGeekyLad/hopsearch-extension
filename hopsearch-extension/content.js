@@ -4,13 +4,42 @@ console.log("HopSearch is alive on this page.");
 //     //
 // }, )
 
+let enabled = true;
 let pressedA = false;
 
-window.addEventListener('keydown', (e) => {
-    console.log(`Pressed in content: ${e.code}`);
-    if (e.code.startsWith('Alt')) pressedA = true;
+// key-combo handlers
+window.addEventListener('keydown', keyDownHandler);
+window.addEventListener('keyup', keyUpHandler);
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log(`Got message "${request}".`);
+    switch (request) {
+        case 'toggle-pause':
+            if (enabled) {
+                window.removeEventListener('keyup', keyUpHandler);
+                window.removeEventListener('keydown', keyDownHandler);
+                console.log('Paused on this page.');
+            } else {
+                window.addEventListener('keydown', keyDownHandler);
+                window.addEventListener('keyup', keyUpHandler);
+                console.log('Resumed on this page.');
+            }
+            enabled = !enabled;
+            break;
+        case 'locate-search':
+            console.log('Waiting for your click on search element ...');
+            window.addEventListener('click', clickHandlerForLocatingSearchBox);
+            break;
+        default: console.log('Content does not know how to handle this command. :/');
+    }
 });
-window.addEventListener('keyup', async (e) => {
+
+function getDomain(href) {
+    const s = href.substring(href.indexOf('//') + 2, href.indexOf('/', href.indexOf('//') + 2));
+    return s;
+}
+
+function keyUpHandler(e) {
     console.log(`Released in content: ${e.code}`);
     if (e.code.startsWith('Alt')) pressedA = false;
     if (e.code === 'Slash' && pressedA) {
@@ -30,20 +59,21 @@ window.addEventListener('keyup', async (e) => {
                 default: console.log(`Bad selector "${elementSelector}". :/`);
             }
         });
-
-        // switch (getDomain(location.href)) {
-        //     case 'www.vocabulary.com':
-        //         document.getElementById('search').focus();
-        //         break;
-        //     case 'forum.xda-developers.com':
-        //         document.getElementsByClassName('uix_searchDropdown__trigger')[0].focus();
-        //         break;
-        // }
-        // console.log('Hey! We are there!');
     }
-});
+}
 
-function getDomain(href) {
-    const s = href.substring(href.indexOf('//') + 2, href.indexOf('/', href.indexOf('//') + 2));
-    return s;
+function keyDownHandler(e) {
+    console.log(`Pressed in content: ${e.code}`);
+    if (e.code.startsWith('Alt')) pressedA = true;
+}
+
+function clickHandlerForLocatingSearchBox(e) {
+    const mId = e.target.getAttribute('id');
+    const mClass = e.target.getAttribute('class');
+    console.log(`Click detected on element id="${mId}" and class="${mClass}"`)
+    let newConfig = {};
+    newConfig[getDomain(window.location.href)] = mId ? `#${mId}` : `.${mClass}`;
+    chrome.storage.local.set(newConfig);
+    window.removeEventListener('click', clickHandlerForLocatingSearchBox);
+    alert('Saved!');
 }
