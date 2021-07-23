@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="popup.css">
-  </head>
-  <body>
-    <h1>HopSearch</h1>
-    Made with 	&hearts; by theGeekyLad
-    <hr>
-    <input type="text" placeholder="URL" id="field-url">
+
+<head>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>HopSearch</h1>
+  Made with &hearts; by theGeekyLad
+  <hr>
+  <div class="input-group mb-3">
+    <input type="text" class="input sml-font" placeholder="URL" id="field-url">
+  </div>
+  <!-- <input type="text" class="input" placeholder="URL" id="field-url"> -->
+  <div class="input-group mb-2">
     <input type="text" placeholder="Selector" id="field-selector">
-    <button id="button-locate">Locate Search Box</button>
-    <button id="button-save">Save</button>
-    <button id="button-debug">Debug</button>
-    <button id="button-pause">Toggle Pause Once</button>
-    <hr>
-    <button id="button-sync">Sync</button>
-    <button id="button-copy">Copy Config</button>
-  </body>
-  <script src="popup.js"></script>
+  </div>
+
+  <button type="button" class="btn btn-primary btn-sm btn-inside" id="button-locate">Locate Search Box</button>
+  <button type="button" class="btn btn-dark btn-sm btn-inside" id="button-save">Save</button>
+  <button type="button" class="btn btn-outline-danger btn-sm btn-inside" id="button-debug">Debug</button>
+  <button type="button" class="btn btn-outline-secondary btn-sm btn-inside" id="button-pause">Toggle Pause Once</button>
+  <hr>
+  <button type="button" class="btn btn-outline-secondary btn-sm" id="button-sync">Sync</button>
+  <button type="button" class="btn btn-outline-secondary btn-sm" id="button-copy">Copy Config</button>
+</body>
+<script src="popup.js"></script>
+
 </html>
