@@ -1,7 +1,15 @@
 body {
+    font-family: 'Poppins', sans-serif;
     padding: 0 1rem 1rem;
+    align-items: center;
 }
 
-body > * {
+body>* {
+    font-family: 'Poppins', sans-serif;
     margin-top: 1rem;
+    align-items: center;
+}
+
+.btn-inside {
+    margin: 0.8rem 0 0 0;
 }
