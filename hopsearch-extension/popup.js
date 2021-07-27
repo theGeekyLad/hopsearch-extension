@@ -1,7 +1,7 @@
 let tab;
 chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
     [tab] = res;
-    document.getElementById('field-url').value = getDomain(tab.url);
+    document.getElementById('field-url').innerHTML = getDomain(tab.url);
     updateSelectorOfThisTab();
 });
 // console.log("Loaded.");
@@ -30,7 +30,7 @@ chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
 
 document.getElementById('button-save').addEventListener('click', () => {
     let newConfig = {};
-    newConfig[getDomain(tab.url)] = document.getElementById('field-selector').value;
+    newConfig[getDomain(tab.url)] = document.getElementById('field-selector').innerHTML;
     chrome.storage.local.set(newConfig);
     alert('Saved!');
 });
@@ -90,6 +90,6 @@ function getDomain(href) {
 function updateSelectorOfThisTab() {
     chrome.storage.local.get(getDomain(tab.url), function (result) {
         if (result == null || Object.keys(result).length === 0) return;
-        document.getElementById('field-selector').value = result[getDomain(tab.url)];
+        document.getElementById('field-selector').innerHTML = result[getDomain(tab.url)];
     });
 }

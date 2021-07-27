@@ -10,25 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <h1>HopSearch</h1>
-  Made with &hearts; by theGeekyLad
+<body class="text-center">
+  <h2>HopSearch</h2>
+
   <hr>
-  <div class="input-group mb-3">
-    <input type="text" class="input sml-font" placeholder="URL" id="field-url">
+
+  <!-- website domain text -->
+  <div class="mb-4 d-flex flex-column">
+    <div class="title-text">Current Website Domain</div>
+    <div id="field-url" class="sml-font">URL</div>
   </div>
-  <!-- <input type="text" class="input" placeholder="URL" id="field-url"> -->
-  <div class="input-group mb-2">
-    <input type="text" placeholder="Selector" id="field-selector">
+  <!-- search box finder -->
+  <div class="mb-4 d-flex flex-column">
+    <div class="title-text">Search box Finder</div>
+    <div>Found <span id="field-selector"></span></div>
+    <!-- <button type="button" class="btn btn-primary btn-sm">Find Search Box</button> -->
+    <button type="button" id="button-locate" class="btn btn-link btn-sm">Click here to find again</button>
+  </div>
+  <!-- sync -->
+  <div class="mb-4 d-flex flex-column">
+    <div class="title-text">Refresh Websites List</div>
+    <button type="button" id="button-sync" class="btn btn-primary btn-sm">Update Configuration</button>
+  </div>
+  <!-- status -->
+  <div class="mb-4 d-flex flex-column">
+    <div class="title-text">Extension Status</div>
+    <button type="button" id="button-pause" class="btn btn-success btn-sm">Active</button>
   </div>
 
-  <button type="button" class="btn btn-primary btn-sm btn-inside" id="button-locate">Locate Search Box</button>
+  <hr>
+
+  <h4>Contribute</h4>
+
+  <div class="mb-4 d-flex flex-column">
+    <div class="title-text">Found a search box that we didn't know of?</div>
+    <button type="button" class="btn btn-link btn-sm">Help improve this extension!</button>
+    <button type="button" id="button-copy" class="btn btn-outline-dark btn-sm">Copy Configuration</button>
+  </div>
+
+  <hr>
+
   <button type="button" class="btn btn-dark btn-sm btn-inside" id="button-save">Save</button>
   <button type="button" class="btn btn-outline-danger btn-sm btn-inside" id="button-debug">Debug</button>
   <button type="button" class="btn btn-outline-secondary btn-sm btn-inside" id="button-pause">Toggle Pause Once</button>
-  <hr>
-  <button type="button" class="btn btn-outline-secondary btn-sm" id="button-sync">Sync</button>
-  <button type="button" class="btn btn-outline-secondary btn-sm" id="button-copy">Copy Config</button>
 </body>
 <script src="popup.js"></script>
 

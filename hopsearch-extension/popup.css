@@ -1,7 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
-    padding: 0 1rem 1rem;
+    /* padding: 0 1rem 1rem; */
     align-items: center;
+    min-width: 350px;
+    padding: 1rem;
 }
 
 body>* {
@@ -12,4 +14,12 @@ body>* {
 
 .btn-inside {
     margin: 0.8rem 0 0 0;
+}
+
+#field-url {
+    text-decoration: underline;
+}
+
+.title-text {
+    font-size: 0.8rem;
 }
