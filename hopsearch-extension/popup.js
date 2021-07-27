@@ -28,17 +28,17 @@ chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
 //     });
 // }
 
-document.getElementById('button-save').addEventListener('click', () => {
-    let newConfig = {};
-    newConfig[getDomain(tab.url)] = document.getElementById('field-selector').innerHTML;
-    chrome.storage.local.set(newConfig);
-    alert('Saved!');
-});
+// document.getElementById('button-save').addEventListener('click', () => {
+//     let newConfig = {};
+//     newConfig[getDomain(tab.url)] = document.getElementById('field-selector').innerHTML;
+//     chrome.storage.local.set(newConfig);
+//     alert('Saved!');
+// });
 
-document.getElementById('button-debug').addEventListener('click', () => {
-    chrome.storage.local.clear();
-    alert('Forgotten all websites.');
-});
+// document.getElementById('button-debug').addEventListener('click', () => {
+//     chrome.storage.local.clear();
+//     alert('Forgotten all websites.');
+// });
 
 document.getElementById('button-sync').addEventListener('click', () => {
     // chrome.runtime.sendMessage({ cmd: "sync" }, function (response) {
@@ -75,6 +75,12 @@ document.getElementById('button-copy').addEventListener('click', () => {
     });
 });
 
+document.getElementById('link-profile').addEventListener('click', () => {
+    chrome.tabs.create({
+        url: 'https://www.linkedin.com/in/thegeekylad/'
+      });
+});
+
 // document.onreadystatechange = function() {
 //     if (document.readyState === 'complete') {
 //         document.getElementById('field-url').innerHTML = 'hi';
@@ -89,7 +95,13 @@ function getDomain(href) {
 
 function updateSelectorOfThisTab() {
     chrome.storage.local.get(getDomain(tab.url), function (result) {
-        if (result == null || Object.keys(result).length === 0) return;
-        document.getElementById('field-selector').innerHTML = result[getDomain(tab.url)];
+        if (result == null || Object.keys(result).length === 0) {
+            document.getElementById('found-field').setAttribute('hidden', true);
+            document.getElementById('not-found-field').removeAttribute('hidden');
+            document.getElementsByClassName('btn-link-find')[0].setAttribute('hidden', true);
+            document.getElementsByClassName('btn-find')[0].removeAttribute('hidden');
+        }
+        else
+            document.getElementById('field-selector').innerHTML = result[getDomain(tab.url)];
     });
 }

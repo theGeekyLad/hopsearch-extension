@@ -23,14 +23,15 @@
   <!-- search box finder -->
   <div class="mb-4 d-flex flex-column">
     <div class="title-text">Search box Finder</div>
-    <div>Found <span id="field-selector"></span></div>
-    <!-- <button type="button" class="btn btn-primary btn-sm">Find Search Box</button> -->
-    <button type="button" id="button-locate" class="btn btn-link btn-sm">Click here to find again</button>
+    <div id="found-field">Found <span id="field-selector"></span></div>
+    <div id="not-found-field" hidden>Not Found</div>
+    <button type="button" id="button-locate" class="btn btn-primary btn-sm btn-find" hidden>Find Search Box</button>
+    <button type="button" id="button-locate" class="btn btn-link btn-sm btn-link-find">Click here to find again.</button>
   </div>
   <!-- sync -->
   <div class="mb-4 d-flex flex-column">
     <div class="title-text">Refresh Websites List</div>
-    <button type="button" id="button-sync" class="btn btn-primary btn-sm">Update Configuration</button>
+    <button type="button" id="button-sync" class="btn btn-outline-primary btn-sm">Update Configuration</button>
   </div>
   <!-- status -->
   <div class="mb-4 d-flex flex-column">
@@ -43,17 +44,16 @@
   <h4>Contribute</h4>
 
   <div class="mb-4 d-flex flex-column">
-    <div class="title-text">Found a search box that we didn't know of?</div>
+    <div class="title-text">Found a search box that I didn't know of?</div>
     <button type="button" class="btn btn-link btn-sm">Help improve this extension!</button>
     <button type="button" id="button-copy" class="btn btn-outline-dark btn-sm">Copy Configuration</button>
   </div>
 
-  <hr>
+  <div class="small-text">Made with by &#10084; <a href="#" id="link-profile">theGeekyLad</a></div>
 
-  <button type="button" class="btn btn-dark btn-sm btn-inside" id="button-save">Save</button>
+  <!-- <button type="button" class="btn btn-dark btn-sm btn-inside" id="button-save">Save</button>
   <button type="button" class="btn btn-outline-danger btn-sm btn-inside" id="button-debug">Debug</button>
-  <button type="button" class="btn btn-outline-secondary btn-sm btn-inside" id="button-pause">Toggle Pause Once</button>
+  <button type="button" class="btn btn-outline-secondary btn-sm btn-inside" id="button-pause">Toggle Pause Once</button> -->
 </body>
 <script src="popup.js"></script>
-
 </html>
