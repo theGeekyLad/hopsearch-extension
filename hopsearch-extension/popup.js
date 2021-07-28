@@ -3,6 +3,8 @@ chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
     [tab] = res;
     document.getElementById('field-url').innerHTML = getDomain(tab.url);
     updateSelectorOfThisTab();
+    // update extension status
+    toggleStatus();
 });
 // console.log("Loaded.");
 
@@ -54,16 +56,18 @@ document.getElementById('button-sync').addEventListener('click', () => {
     })
 });
 
+document.getElementById('button-pause').focus();  // enables user to Alt+H and spacebar to quickly enable / disable
 document.getElementById('button-pause').addEventListener('click', () => {
     chrome.tabs.sendMessage(tab.id, 'toggle-pause', function (response) {
-        console.log(response);
+        toggleStatus();
     });
-    alert('Toggled pause once.');
 });
 
-document.getElementById('button-locate').addEventListener('click', () => {
-    chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
-        // console.log(response);
+Array.from(document.getElementsByClassName('button-locate')).forEach((elem) => {
+    elem.addEventListener('click', () => {
+        chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
+            // console.log(response);
+        });
     });
 });
 
@@ -78,7 +82,7 @@ document.getElementById('button-copy').addEventListener('click', () => {
 document.getElementById('link-profile').addEventListener('click', () => {
     chrome.tabs.create({
         url: 'https://www.linkedin.com/in/thegeekylad/'
-      });
+    });
 });
 
 // document.onreadystatechange = function() {
@@ -91,7 +95,7 @@ function getDomain(href) {
     const s = href.substring(href.indexOf('//') + 2, href.indexOf('/', href.indexOf('//') + 2));
     console.log(s);
     return s;
-}
+} 1
 
 function updateSelectorOfThisTab() {
     chrome.storage.local.get(getDomain(tab.url), function (result) {
@@ -103,5 +107,20 @@ function updateSelectorOfThisTab() {
         }
         else
             document.getElementById('field-selector').innerHTML = result[getDomain(tab.url)];
+    });
+}
+
+function toggleStatus() {
+    chrome.tabs.sendMessage(tab.id, 'get-status', function (response) {
+        const buttonStatus = document.getElementById('button-pause');
+        if (response) {
+            buttonStatus.innerHTML = 'Active';
+            buttonStatus.classList.remove('btn-danger');
+            buttonStatus.classList.add('btn-success');
+        } else {
+            buttonStatus.innerHTML = 'Paused';
+            buttonStatus.classList.remove('btn-success');
+            buttonStatus.classList.add('btn-danger');
+        }
     });
 }

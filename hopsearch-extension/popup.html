@@ -11,7 +11,8 @@
 </head>
 
 <body class="text-center">
-  <h2>HopSearch</h2>
+  <img src="images/hopsearch-logo-48.png" alt="">
+  <h2 class="mt-1">HopSearch</h2>
 
   <hr>
 
@@ -23,10 +24,10 @@
   <!-- search box finder -->
   <div class="mb-4 d-flex flex-column">
     <div class="title-text">Search box Finder</div>
-    <div id="found-field">Found <span id="field-selector"></span></div>
-    <div id="not-found-field" hidden>Not Found</div>
-    <button type="button" id="button-locate" class="btn btn-primary btn-sm btn-find" hidden>Find Search Box</button>
-    <button type="button" id="button-locate" class="btn btn-link btn-sm btn-link-find">Click here to find again.</button>
+    <div id="found-field"><span id="field-selector"></span></div>
+    <div id="not-found-field" class="text-danger" hidden>Not Found</div>
+    <button type="button" class="btn btn-primary btn-sm btn-find button-locate" hidden>Find Search Box</button>
+    <button type="button" class="btn btn-link btn-sm btn-link-find button-locate">Click here to find again.</button>
   </div>
   <!-- sync -->
   <div class="mb-4 d-flex flex-column">
@@ -41,9 +42,9 @@
 
   <hr>
 
-  <h4>Contribute</h4>
+  <!-- <h4>Contribute</h4> -->
 
-  <div class="mb-4 d-flex flex-column">
+  <div class="mb-3 d-flex flex-column">
     <div class="title-text">Found a search box that I didn't know of?</div>
     <button type="button" class="btn btn-link btn-sm">Help improve this extension!</button>
     <button type="button" id="button-copy" class="btn btn-outline-dark btn-sm">Copy Configuration</button>
@@ -56,4 +57,5 @@
   <button type="button" class="btn btn-outline-secondary btn-sm btn-inside" id="button-pause">Toggle Pause Once</button> -->
 </body>
 <script src="popup.js"></script>
+
 </html>
