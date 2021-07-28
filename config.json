@@ -1,0 +1,13 @@
+{
+    "developer.chrome.com": ".search-box__input",
+    "music.youtube.com": ".center-content",
+    "www.amazon.in": "#twotabsearchtextbox",
+    "www.flipkart.com": "._3704LK",
+    "www.linkedin.com": ".search-global-typeahead__input",
+    "www.quora.com": ".q-input",
+    "www.reddit.com": "#header-search-bar",
+    "www.team-bhp.com": "#search_input",
+    "www.thefreedictionary.com": "#f1Word",
+    "www.vocabulary.com": "#search",
+    "yocket.in": "#search-input"
+}
