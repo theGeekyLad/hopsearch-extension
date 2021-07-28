@@ -61,6 +61,7 @@ document.getElementById('button-pause').addEventListener('click', () => {
 
 Array.from(document.getElementsByClassName('button-locate')).forEach((elem) => {
     elem.addEventListener('click', () => {
+        elem.innerHTML = "Now click on the search-box ...";
         chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
             // console.log(response);
         });
