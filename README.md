@@ -54,7 +54,9 @@ I'll merge it upstream every week.
 
 - Background auto-sync for downloading new configuration to be added
 
-Made with :heart: by `theGeekyLad`Add 
+---
+
+Made with :heart: by `theGeekyLad`
 
 <!--
 ## To-Do
