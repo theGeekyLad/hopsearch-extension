@@ -50,7 +50,9 @@ Once you've made it work for an undiscovered page, as explained above in feature
 
 I'll merge it upstream every week.
 
----
+## Roadmap
+
+- Background auto-sync for downloading new configuration to be added
 
 Made with :heart: by `theGeekyLad`Add 
 

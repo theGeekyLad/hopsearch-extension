@@ -33,12 +33,12 @@ chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
 // document.getElementById('button-save').addEventListener('click', () => {
 //     let newConfig = {};
 //     newConfig[getDomain(tab.url)] = document.getElementById('field-selector').innerHTML;
-//     chrome.storage.local.set(newConfig);
+//     chrome.storage.sync.set(newConfig);
 //     alert('Saved!');
 // });
 
 // document.getElementById('button-debug').addEventListener('click', () => {
-//     chrome.storage.local.clear();
+//     chrome.storage.sync.clear();
 //     alert('Forgotten all websites.');
 // });
 
@@ -46,14 +46,10 @@ document.getElementById('button-sync').addEventListener('click', () => {
     // chrome.runtime.sendMessage({ cmd: "sync" }, function (response) {
     //     console.log(`Did sync complete? And: "${response.msg}"`);
     // });
-    fetch('http://localhost:3000').then(res => res.json()).then(data => {
-        if (data != null && data.length !== 0) {
-            for (let pair of data)
-                chrome.storage.local.set(pair);
-            updateSelectorOfThisTab();
-            alert('Updated!');
-        }
-    })
+    document.getElementById('button-sync').innerHTML = "Loading ...";
+    chrome.tabs.sendMessage(tab.id, 'sync', function (response) {
+        // updateSelectorOfThisTab();
+    });
 });
 
 document.getElementById('button-pause').focus();  // enables user to Alt+H and spacebar to quickly enable / disable
@@ -72,9 +68,9 @@ Array.from(document.getElementsByClassName('button-locate')).forEach((elem) => {
 });
 
 document.getElementById('button-copy').addEventListener('click', () => {
-    chrome.storage.local.get(null, items => {
+    chrome.storage.sync.get(null, items => {
         navigator.clipboard.writeText(JSON.stringify(items)).then(() => {
-            alert('Copied config!');
+            // alert('Copied config!');
         })
     });
 });
@@ -82,6 +78,12 @@ document.getElementById('button-copy').addEventListener('click', () => {
 document.getElementById('link-profile').addEventListener('click', () => {
     chrome.tabs.create({
         url: 'https://www.linkedin.com/in/thegeekylad/'
+    });
+});
+
+document.getElementById('button-contribute').addEventListener('click', () => {
+    chrome.tabs.create({
+        url: 'https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md'
     });
 });
 
@@ -98,7 +100,7 @@ function getDomain(href) {
 } 1
 
 function updateSelectorOfThisTab() {
-    chrome.storage.local.get(getDomain(tab.url), function (result) {
+    chrome.storage.sync.get(getDomain(tab.url), function (result) {
         if (result == null || Object.keys(result).length === 0) {
             document.getElementById('found-field').setAttribute('hidden', true);
             document.getElementById('not-found-field').removeAttribute('hidden');

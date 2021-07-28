@@ -34,6 +34,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             // console.log(`Extension is ${enabled}.`);
             sendResponse(enabled);
             break;
+        case 'sync':
+            fetch('http://localhost:3000').then(res => res.json()).then(data => {
+                if (data != null && data.length !== 0) {
+                    for (let pair of data)
+                        chrome.storage.sync.set(pair);
+                }
+                setTimeout(() => { alert("HopSearch sync complete."); });
+                // sendResponse(true);
+            }).catch((err) => {
+                setTimeout(() => { alert("HopSearch couldn't, please try again. :/"); });
+                // sendResponse(false);
+            });
+            break;
         // default: console.log('Content does not know how to handle this command. :/');
     }
 });
@@ -48,7 +61,7 @@ function keyUpHandler(e) {
     if (e.code.startsWith('Alt')) pressedA = false;
     if (e.code === 'Slash' && pressedA) {
         // console.log('Key-combo matched, getting config for this website ...');
-        chrome.storage.local.get(getDomain(window.location.href), function (result) {
+        chrome.storage.sync.get(getDomain(window.location.href), function (result) {
             if (result == null || Object.keys(result).length === 0) {
                 // console.log('Ah, no config yet. :/');
                 return;
@@ -78,7 +91,7 @@ function clickHandlerForLocatingSearchBox(e) {
     // console.log(`Click detected on element id="${mId}" and class="${mClass}"`)
     let newConfig = {};
     newConfig[getDomain(window.location.href)] = mId ? `#${mId}` : `.${mClass}`;
-    chrome.storage.local.set(newConfig);
+    chrome.storage.sync.set(newConfig);
     window.removeEventListener('click', clickHandlerForLocatingSearchBox);
     alert('Saved!');
 }
