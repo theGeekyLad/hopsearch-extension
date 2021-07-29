@@ -52,13 +52,7 @@ Pausing the extension on a certain page is as easy as it sounds. Just `Alt+H` to
 
 As I said in the first section, this extension ain't a know-it-all and I require _your_ help in extending it to websites I've not visited before. It helps other users who would visit the same website in the future.
 
-Once you've made it work for an undiscovered page, as explained above in features:
-
-- `AltH` or click on the extension button in the Chrome toolbar
-- Click on _Copy Config_
-- [Create a new issue](https://github.com/theGeekyLad/hopsearch-extension/issues/new) with the config
-
-I'll merge it upstream every week.
+Once you've made it work for an undiscovered page, as explained above in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
 
 ## Roadmap
 
