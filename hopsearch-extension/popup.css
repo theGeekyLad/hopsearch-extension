@@ -4,6 +4,7 @@ body {
     align-items: center;
     min-width: 300px;
     padding: 1rem;
+    user-select: none;
 }
 
 #field-url {
