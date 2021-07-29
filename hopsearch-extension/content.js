@@ -96,5 +96,5 @@ function clickHandlerForLocatingSearchBox(e) {
     newConfig[getDomain(window.location.href)] = mId ? `#${mId}` : `.${mClass}`;
     chrome.storage.sync.set(newConfig);
     window.removeEventListener('click', clickHandlerForLocatingSearchBox);
-    alert('Saved configuration!');
+    alert('Saved! Now try pressing Alt+H.');
 }
