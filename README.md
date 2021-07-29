@@ -50,7 +50,13 @@ Pausing the extension on a certain page is as easy as it sounds. Just `Alt+H` to
 
 ## Issues :rage:
 
-### Extension always shows _Paused_
+### `Alt+H` does nothing
+
+Is this website supported by the extension? If you `Alt+H` or click on the extension button in the Chrome toolbar, if under _Search Box Finder_ you see the words _"Not Found"_ then you need to [make it work](https://github.com/theGeekyLad/hopsearch-extension#how-to-make-it-work-for-this-website) for this website as explained above.
+
+If you don't see the words _"Not Found"_, maybe a page refresh should fix it.
+
+### Extension always shows a _Paused_ status
 
 Maybe you just updated the extension at `chrome://extensions` so refreshing the page you're on should help.
 
@@ -58,7 +64,7 @@ Maybe you just updated the extension at `chrome://extensions` so refreshing the 
 
 As I said in the first section, this extension ain't a know-it-all and I require _your_ help in extending it to websites I've not visited before. It helps other users who would visit the same website in the future.
 
-Once you've made it work for an undiscovered page, [as explained above](https://github.com/theGeekyLad/hopsearch-extension#how-to-make-it-work-for-this-website) in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
+Once you've [made it work]((https://github.com/theGeekyLad/hopsearch-extension#how-to-make-it-work-for-this-website)) for an undiscovered page, in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
 
 ## Roadmap :blue_car:
 
