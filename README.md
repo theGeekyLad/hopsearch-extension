@@ -60,7 +60,7 @@ As I said in the first section, this extension ain't a know-it-all and I require
 
 Once you've made it work for an undiscovered page, [as explained above](https://github.com/theGeekyLad/hopsearch-extension#how-to-make-it-work-for-this-website) in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
 
-## Roadmap
+## Roadmap :blue_car:
 
 - Background auto-sync for downloading new configuration to be added
 
