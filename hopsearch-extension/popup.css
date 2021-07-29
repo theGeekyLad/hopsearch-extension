@@ -2,18 +2,8 @@ body {
     font-family: 'Poppins', sans-serif;
     /* padding: 0 1rem 1rem; */
     align-items: center;
-    min-width: 350px;
+    min-width: 300px;
     padding: 1rem;
-}
-
-body>* {
-    font-family: 'Poppins', sans-serif;
-    /* margin-top: 1rem; */
-    align-items: center;
-}
-
-.btn-inside {
-    margin: 0.8rem 0 0 0;
 }
 
 #field-url {

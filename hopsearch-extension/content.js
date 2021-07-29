@@ -30,6 +30,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             // console.log('Waiting for your click on search element ...');
             window.addEventListener('click', clickHandlerForLocatingSearchBox);
             break;
+        case 'locate-search-stop':
+            window.removeEventListener('click', clickHandlerForLocatingSearchBox);
+            break;
         case 'get-status':
             // console.log(`Extension is ${enabled}.`);
             sendResponse(enabled);

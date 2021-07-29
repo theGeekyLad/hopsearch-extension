@@ -1,4 +1,8 @@
+// vars
 let tab;
+let mustLocate = true;
+let cacheButtonText;
+
 chrome.tabs.query({ active: true, currentWindow: true }).then(res => {
     [tab] = res;
     document.getElementById('field-url').innerHTML = getDomain(tab.url);
@@ -47,6 +51,7 @@ document.getElementById('button-sync').addEventListener('click', () => {
     //     console.log(`Did sync complete? And: "${response.msg}"`);
     // });
     document.getElementById('button-sync').innerHTML = "Loading ...";
+    document.getElementById('button-sync').setAttribute('disabled', true);
     chrome.tabs.sendMessage(tab.id, 'sync', function (response) {
         // updateSelectorOfThisTab();
     });
@@ -61,10 +66,19 @@ document.getElementById('button-pause').addEventListener('click', () => {
 
 Array.from(document.getElementsByClassName('button-locate')).forEach((elem) => {
     elem.addEventListener('click', () => {
-        elem.innerHTML = "Now click on the search-box ...";
-        chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
-            // console.log(response);
-        });
+        if (mustLocate) {
+            cacheButtonText = elem.innerHTML;
+            elem.innerHTML = "Now click on the search-box ...";
+            chrome.tabs.sendMessage(tab.id, 'locate-search', function (response) {
+                // console.log(response);
+            });
+        } else {
+            elem.innerHTML = cacheButtonText;
+            chrome.tabs.sendMessage(tab.id, 'locate-search-stop', function (response) {
+                // console.log(response);
+            });
+        }
+        mustLocate = !mustLocate;
     });
 });
 
