@@ -12,9 +12,11 @@ HopSearch is a Chrome **browser extension** that allows you to use the key-combo
 
 ## How to use it? :wrench:
 
-If you're here, you're probably not going to install it via the Chrome Extensions store but, hey, that's the easiest way to go.
+<!-- If you're here, you're probably not going to install it via the Chrome Extensions store but, hey, that's the easiest way to go. -->
 
-Nonetheless, here's how you install it from this repository:
+The extension is not yet on Chrome Web Store so for the time being, you can install it off this repository using Chrome's developer mode as follows:
+
+<!-- Nonetheless, here's how you install it from this repository: -->
 
 - Clone this repository or _download as ZIP_ and extract the ZIP
 - Open Chrome
