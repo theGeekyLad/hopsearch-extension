@@ -85,7 +85,10 @@ Array.from(document.getElementsByClassName('button-locate')).forEach((elem) => {
 document.getElementById('button-copy').addEventListener('click', () => {
     chrome.storage.sync.get(null, items => {
         navigator.clipboard.writeText(JSON.stringify(items)).then(() => {
-            // alert('Copied config!');
+            document.getElementById('button-copy').innerHTML = "Copied!"
+            setTimeout(() => {
+                document.getElementById('button-copy').innerHTML = "Copy Configuration";
+            }, 1000);
         })
     });
 });
