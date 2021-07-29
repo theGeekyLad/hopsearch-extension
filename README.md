@@ -4,6 +4,8 @@ _`Alt+/` to jump to the search box in a jiffy!_
 
 Twitter, Google Search and a few others have it, but, possibly, your favorite website doesn't allow you to use a key-combo to jump to the search field.
 
+![HopSearch Screenshot Image](https://github.com/theGeekyLad/hopsearch-extension/blob/master/screenshot.png)
+
 ## What is it? :confused:
 
 HopSearch is a Chrome **browser extension** that allows you to use the key-combo `Alt+/` to jump to the search input box on any page. Ofcourse, the extension doesn't know-it-all and hence requires your help in discovering new pages, which, again, is just a _click_ away.
