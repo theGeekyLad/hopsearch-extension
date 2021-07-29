@@ -34,7 +34,7 @@ Now hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
 
 - Open your [favorite website](https://www.reddit.com/r/selfhosted/)
 - `AltH` or click on the extension button in the Chrome toolbar
-- Click on _Locate Search Box_
+- Click on _Find Search Box_
 - Click on the search input field on the website
 - You should now see an alert stating that the config has been saved
 
