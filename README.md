@@ -16,9 +16,7 @@ _Coming to the Chome Web Store soon ... !_
 
 <!-- If you're here, you're probably not going to install it via the Chrome Extensions store but, hey, that's the easiest way to go. -->
 
-As of now, head over to [releases](https://github.com/theGeekyLad/hopsearch-extension/releases) and pick up the latest you can find.
-
-Once done, hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
+As of now, head over to [releases](https://github.com/theGeekyLad/hopsearch-extension/releases) and pick up the latest you can find. Once done, hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
 
 ## Features _(as FAQs)_ :gem:
 
