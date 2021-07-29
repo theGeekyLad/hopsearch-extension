@@ -35,7 +35,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             sendResponse(enabled);
             break;
         case 'sync':
-            fetch('http://localhost:3000').then(res => res.json()).then(data => {
+            fetch('https://hopsearch-extension.herokuapp.com/').then(res => res.json()).then(data => {
                 if (data != null && data.length !== 0) {
                     for (let pair of data)
                         chrome.storage.sync.set(pair);
