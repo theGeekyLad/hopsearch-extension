@@ -16,17 +16,9 @@ _Coming to the Chome Web Store soon ... !_
 
 <!-- If you're here, you're probably not going to install it via the Chrome Extensions store but, hey, that's the easiest way to go. -->
 
-As of now, you can install it off this repository using Chrome's developer mode as follows:
+As of now, head over to [releases](https://github.com/theGeekyLad/hopsearch-extension/releases) and pick up the latest you can find. The instructions to install are also provided and won't take you over a minute or two!
 
-<!-- Nonetheless, here's how you install it from this repository: -->
-
-- Clone this repository or _download as ZIP_ and extract the ZIP
-- Open Chrome
-- Open the Extension Management page by navigating to `chrome://extensions`
-- Enable _Developer Mode_ by clicking the toggle switch next to _Developer mode_
-- Click the _Load unpacked_ button and select the cloned / extracted directory
-
-Now hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
+Once done, hit `Alt+H` to fire up the extension _(and maybe ... pin it?)_.
 
 ## Features _(as FAQs)_ :gem:
 
