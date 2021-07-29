@@ -52,7 +52,7 @@ Pausing the extension on a certain page is as easy as it sounds. Just `Alt+H` to
 
 As I said in the first section, this extension ain't a know-it-all and I require _your_ help in extending it to websites I've not visited before. It helps other users who would visit the same website in the future.
 
-Once you've made it work for an undiscovered page, as explained above in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
+Once you've made it work for an undiscovered page, [as explained above](https://github.com/theGeekyLad/hopsearch-extension#how-to-make-it-work-for-this-website) in features, check out this [short contributing guide](https://github.com/theGeekyLad/hopsearch-extension/blob/master/CONTRIBUTING.md).
 
 ## Roadmap
 
