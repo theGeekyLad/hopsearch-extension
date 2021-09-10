@@ -61,7 +61,10 @@ function getDomain(href) {
 
 function keyUpHandler(e) {
     // console.log(`Released in content: ${e.code}`);
-    if (e.code.startsWith('Alt')) pressedA = false;
+    if (e.code === 'AltLeft' || e.code === 'AltRight') {
+        console.log(`Released Alt: ${e.code}`);
+        pressedA = false;
+    }
     if (e.code === 'Slash' && pressedA) {
         // console.log('Key-combo matched, getting config for this website ...');
         chrome.storage.sync.get(getDomain(window.location.href), function (result) {
@@ -78,13 +81,17 @@ function keyUpHandler(e) {
                 case '#': document.getElementById(selectorName).focus(); break;
                 // default: console.log(`Bad selector "${elementSelector}". :/`);
             }
+            console.log("[HopSearch] Focus on search field.");
         });
     }
 }
 
 function keyDownHandler(e) {
     // console.log(`Pressed in content: ${e.code}`);
-    if (e.code.startsWith('Alt')) pressedA = true;
+    if (e.code === 'AltLeft' || e.code === 'AltRight') {
+        console.log(`Pressed Alt: ${e.code}`);
+        pressedA = true;
+    }
 }
 
 function clickHandlerForLocatingSearchBox(e) {
