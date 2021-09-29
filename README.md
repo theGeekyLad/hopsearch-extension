@@ -1,4 +1,4 @@
-_**Hacktoberfest 2021:** You're welcome to contribute! For starters, test-drive this extension and check out the `CONTRIBUTING.md` to add your two cents. :smile:_
+_**Hacktoberfest 2021:** You're welcome to contribute! For starters, test-drive this extension and check out the `CONTRIBUTING.md` to add your two cents. :star:_
 
 # HopSearch
 
