@@ -1,3 +1,5 @@
+_**Hacktoberfest 2021:** You're welcome to contribute! For starters, test-drive this extension and check out the `CONTRIBUTING.md` to add your two cents. :smile:_
+
 # HopSearch
 
 _`Comma+Period` to jump to the search box in a jiffy!_
@@ -32,7 +34,7 @@ Try `Comma+Period` and you should find the cursor at the search box.
 
 ### It's officious, how do I stop it?
 
-It could be meddlesome while typing with heavy shortcuts, I understand. Just `Alt+H` or click on the extension button in the Chrome toolbar and then click on _Pause_.
+It could be meddlesome while typing with heavy shortcuts, I understand. Just `Alt+H` or click on the extension button zin the Chrome toolbar and then click on _Pause_.
 
 ### Tell me a nice shortcut!
 
