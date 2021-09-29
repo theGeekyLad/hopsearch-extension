@@ -1,6 +1,6 @@
 # HopSearch
 
-_`Alt+/` to jump to the search box in a jiffy!_
+_`Comma+Period` to jump to the search box in a jiffy!_
 
 Twitter, Google Search and a few others have it, but, possibly, your favorite website doesn't allow you to use a key-combo to jump to the search field.
 
@@ -8,7 +8,7 @@ Twitter, Google Search and a few others have it, but, possibly, your favorite we
 
 ## What is it? :confused:
 
-HopSearch is a Chrome **browser extension** that allows you to use the key-combo `Alt+/` to jump to the search input box on any page. Ofcourse, the extension doesn't know-it-all and hence requires your help in discovering new pages, which, again, is just a _click_ away.
+HopSearch is a Chrome **browser extension** that allows you to use the key-combo `Comma+Period` to jump to the search input box on any page. Ofcourse, the extension doesn't know-it-all and hence requires your help in discovering new pages, which, again, is just a _click_ away.
 
 ## How to use it? :wrench:
 
@@ -28,7 +28,7 @@ As of now, head over to [releases](https://github.com/theGeekyLad/hopsearch-exte
 - Click on the search input field on the website
 - You should now see an alert stating that the config has been saved
 
-Try `Alt+/` and you should find the cursor at the search box.
+Try `Comma+Period` and you should find the cursor at the search box.
 
 ### It's officious, how do I stop it?
 

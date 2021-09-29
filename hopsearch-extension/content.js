@@ -61,12 +61,9 @@ function getDomain(href) {
 
 function keyUpHandler(e) {
     // console.log(`Released in content: ${e.code}`);
-    if (e.code === 'AltLeft' || e.code === 'AltRight') {
-        console.log(`Released Alt: ${e.code}`);
-        pressedA = false;
-    }
-    if (e.code === 'Slash' && pressedA) {
-        // console.log('Key-combo matched, getting config for this website ...');
+    if (e.code === 'Comma') pressedA = false;
+    if (e.code === 'Period' && pressedA) {
+        console.log('Key-combo matched! Trying to move to search field.');
         chrome.storage.sync.get(getDomain(window.location.href), function (result) {
             if (result == null || Object.keys(result).length === 0) {
                 // console.log('Ah, no config yet. :/');
@@ -88,10 +85,7 @@ function keyUpHandler(e) {
 
 function keyDownHandler(e) {
     // console.log(`Pressed in content: ${e.code}`);
-    if (e.code === 'AltLeft' || e.code === 'AltRight') {
-        console.log(`Pressed Alt: ${e.code}`);
-        pressedA = true;
-    }
+    if (e.code === 'Comma') pressedA = true;
 }
 
 function clickHandlerForLocatingSearchBox(e) {
@@ -103,5 +97,5 @@ function clickHandlerForLocatingSearchBox(e) {
     newConfig[getDomain(window.location.href)] = mId ? `#${mId}` : `.${mClass}`;
     chrome.storage.sync.set(newConfig);
     window.removeEventListener('click', clickHandlerForLocatingSearchBox);
-    alert('Saved! Now try pressing Alt+H.');
+    alert('Saved! Now try pressing Comma+Period.');
 }
