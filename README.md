@@ -4,7 +4,7 @@ _`Comma+Period` to jump to the search box in a jiffy!_
 
 Twitter, Google Search and a few others have it, but, possibly, your favorite website doesn't allow you to use a key-combo to jump to the search field.
 
-<img src="https://github.com/theGeekyLad/hopsearch-extension/raw/master/screenshot.png" alt="HopSearch Screenshot Image" style="width: 30%;">
+<img src="https://github.com/theGeekyLad/hopsearch-extension/raw/master/screenshot.png" alt="HopSearch Screenshot Image">
 
 ## What is it? :confused:
 
