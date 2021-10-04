@@ -1,14 +1,25 @@
 {
     "developer.chrome.com": ".search-box__input",
+    "discover.gumroad.com":".navigation-search__input",
     "music.youtube.com": ".center-content",
     "www.amazon.in": "#twotabsearchtextbox",
+    "www.amazon.com":"#twotabsearchtextbox",
+    "www.amazon.fr": "#twotabsearchtextbox",
+    "unsplash.com":"._34lDY",
+    "www.behance.net":".SearchTypeahead-searchInput-1qk",
+    "www.ebay.com":"#gh-ac",
+    "www.ebay.fr":"#gh-ac",
+    "www.flaticon.com":".tag-field__input",
     "www.flipkart.com": "._3704LK",
     "www.linkedin.com": ".search-global-typeahead__input",
     "www.quora.com": ".q-input",
     "www.reddit.com": "#header-search-bar",
     "www.team-bhp.com": "#search_input",
     "www.thefreedictionary.com": "#f1Word",
+    "www.udemy.com":"#u402-search-form-autocomplete--3",
+    "www.vinted.fr":"#search_text",
     "www.vocabulary.com": "#search",
-    "yocket.in": "#search-input",
-    "en.wikipedia.org":"#searchInput"
+    "www.wikipedia.org":"#searchInput",
+    "stackoverflow.com":".s-input",
+    "yocket.in": "#search-input"
 }
