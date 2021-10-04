@@ -61,8 +61,8 @@ function getDomain(href) {
 
 function keyUpHandler(e) {
     // console.log(`Released in content: ${e.code}`);
-    if (e.code === 'Comma') pressedA = false;
-    if (e.code === 'Period' && pressedA) {
+    if (e.key === ',') pressedA = false;
+    if (e.key === '.' && pressedA) {
         console.log('Key-combo matched! Trying to move to search field.');
         chrome.storage.sync.get(getDomain(window.location.href), function (result) {
             if (result == null || Object.keys(result).length === 0) {
@@ -85,7 +85,7 @@ function keyUpHandler(e) {
 
 function keyDownHandler(e) {
     // console.log(`Pressed in content: ${e.code}`);
-    if (e.code === 'Comma') pressedA = true;
+    if (e.key === ',') pressedA = true;
 }
 
 function clickHandlerForLocatingSearchBox(e) {
