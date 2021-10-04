@@ -9,5 +9,6 @@
     "www.team-bhp.com": "#search_input",
     "www.thefreedictionary.com": "#f1Word",
     "www.vocabulary.com": "#search",
-    "yocket.in": "#search-input"
+    "yocket.in": "#search-input",
+    "en.wikipedia.org":"#searchInput"
 }
