@@ -39,5 +39,7 @@
   "www.underarmour.com": ".form-control",
   "www.vocabulary.com": "#search",
   "www.windy.com": "#q",
-  "www2.hm.com": "#main-search"
+  "www2.hm.com": "#main-search",
+  "sjsu.edu": "#gsc-i-id1",
+  "www.asu.edu": ".show-search-input"
 }
